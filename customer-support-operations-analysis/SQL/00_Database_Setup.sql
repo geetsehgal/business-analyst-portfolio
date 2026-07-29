@@ -25,3 +25,36 @@ FROM tickets;
 SELECT *
 FROM tickets
 LIMIT 5;
+
+/*
+===========================================================
+DATA VALIDATION
+===========================================================
+*/
+
+-----------------------------------------------------------
+-- Total Records
+-----------------------------------------------------------
+
+SELECT COUNT(*) AS total_records
+FROM tickets;
+
+-----------------------------------------------------------
+-- Duplicate Ticket IDs
+-----------------------------------------------------------
+
+SELECT
+    COUNT(*) AS total_rows,
+    COUNT(DISTINCT ticket_id) AS unique_ticket_ids
+FROM tickets;
+
+-----------------------------------------------------------
+-- Duplicate Records
+-----------------------------------------------------------
+
+SELECT
+    ticket_id,
+    COUNT(*)
+FROM tickets
+GROUP BY ticket_id
+HAVING COUNT(*) > 1;
