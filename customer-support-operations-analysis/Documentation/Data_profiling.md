@@ -1,114 +1,130 @@
 # Data Profiling
 
-## 1. Dataset Summary
+## Objective
 
-Dataset Name:
-Customer Support Tickets Dataset
+Understand the distribution and characteristics of the dataset before performing business analysis.
 
-Approximate Records:
-200,000
+---
 
-Total Columns:
-30
+## Dataset Summary
 
-Domain:
-Customer Support Operations
+| Total Records | 200,000 |
 
-Industry:
-Cross-industry / SaaS / Digital Products
+### Products (10)
+| Products |
+| Billing System |
+|CRM Platform	|
+| E-commerce Store |
+| Cloud Storage	|
+| Mobile App |
+| Analytics Dashboard	|
+| Web Portal	|
+| Payment Gateway	|
+| Subscription Service	|
+|	API Service	|
 
-Primary Purpose:
-To analyse customer support performance, operational efficiency, customer satisfaction, SLA compliance and support trends.
+### Categories (10)
+| Categories |
+| Feature Request	|
+| Subscription Cancellation	|
+| Performance Issue	|
+| Security Concern	|
+| Login Issue	|
+| Payment Problem	|
+| Bug Report	|
+|	Refund Request	|
+|	Data Sync Issue	|
+|	Account Suspension	|
 
-## 2. Column Classification
+### Region (6)
+| Regions | 
+| Africa |
+| Asia |
+| South America |
+| Europe |
+| North America |
 
-## 2. Column Classification
+### Channels (5)
+| Channels | 
+|Web Form	|
+| Chat	|
+| Phone	|
+| Social Media	|
+| Email |
 
-Identifiers
-- ticket_id
+### Status Distribution (5)
+| Status Values | 
+|In Progress	|
+| Closed	|
+| Pending Customer	|
+|	Resolved	|
+| Open |
 
-Customer Information
-- customer_name
-- customer_email
-- customer_age
-- customer_gender
-- customer_segment
-- customer_tenure_months
+### Priority Distribution (4)
+| Priority Levels | 
+| High |
+| Urgent |
+| Medium |
+| Low |
 
-Ticket Information
-- priority
-- status
-- category
-- issue_description
-- resolution_notes
-- issue_complexity_score
+### Customer Segment Distribution (3)
+| Customer Segments | 
+| Individual |
+| Corporate |
+| Small Business |
 
-Time-related
-- ticket_created_date
-- ticket_resolved_date
-- first_response_time_hours
-- resolution_time_hours
+### Subscription Distribution (4)
+| Subscription Types | 
+| Free |
+| Premium |
+| Basic |
+| Enterprise |
 
-Product Information
-- product
-- subscription_type
+---
 
-Technical Information
-- operating_system
-- browser
+## Numeric Summary
 
-Operational Information
-- channel
-- region
-- language
-- preferred_contact_time
-- escalated
-- sla_breached
+### Customer Satisfaction
 
-Customer Experience
-- customer_satisfaction_score
-- previous_tickets
+- Minimum: 1
+- Maximum: 5
+- Average: 3
 
-## 3. Data Types
+### Resolution Time (Hours)
 
-## 3. Data Types
+- Minimum: 1
+- Maximum: 240
+- Average: 120.55
 
-Text Fields:
-18
+---
+## Initial Observations
 
-Numeric Fields:
-8
+- Ticket distribution appears balanced across support channels.
+- Four priority levels are present.
+- Multiple customer segments are represented.
+- Resolution times vary considerably.
+- Customer satisfaction spans the full scoring range.
 
-Date Fields:
-2
+---
+### Dataset Facts
+- 200,000 records
+- 10 products
+- 5 support channels
+- Average resolution time is 120.55 hours
 
-Boolean Fields:
-2
+---
+### Initial Observations
+- The dataset is sufficiently large for trend analysis.
+- The support operation serves multiple products and customer types.
+- Resolution times show considerable variation.
 
-Primary Identifier:
-ticket_id
-
-## 4. Key Fields
-
-The following columns are expected to drive most business analysis:
-
-- priority
-- status
-- category
-- product
-- channel
-- region
-- customer_segment
-- customer_satisfaction_score
-- resolution_time_hours
-- first_response_time_hours
-- sla_breached
-- escalated
-
-## 5. Potential Data Quality Issues
-
-## 6. Columns Useful for Analysis
-
-## 7. Initial Business Observations
-
-## 8. Next Steps
+---
+### Hypotheses for Further Analysis
+- Do Enterprise customers receive faster support than Free customers?
+- Which product generates the highest ticket volume?
+- Which channel has the highest SLA breach rate?
+- Does higher issue complexity reduce customer satisfaction?
+- Are repeat customers more likely to raise high-priority tickets?
+- Does first response time influence customer satisfaction?
+- Which regions experience the longest average resolution times?
+- Which categories drive the highest escalation rates?
