@@ -43,7 +43,7 @@ SQL/01_Operations_Performance.sql
 ### BQ-02
 
 | Channel | total_tickets | breached_tickets | breach_percentage |
-| ------ | --------  | --------- | ---------| -----|
+| ------ | --------  | --------- | ---------|
 | Email | 39726 | 19919 | 50.14 | 
 | Social Media | 40038 | 20068 | 50.12 |
 | Chat | 40073 | 20080 | 50.11 | 
